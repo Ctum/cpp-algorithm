@@ -24,7 +24,7 @@ int main()
     int x;
     cin>>x;
     if (binarySearch(x))
-        cout<<"该数找到"<<endl;
+        cout<<"该数找到！"<<endl;
     else
         cout<<"该数不存在！"<<endl;
 }
