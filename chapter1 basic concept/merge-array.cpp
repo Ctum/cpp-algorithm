@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/*
+* 输入: 两个已排序的数组
+* 输出: 由以上两个数组合并的已排序数组
+*/
+
 template <class T>
 int getLen(T &arr) {
   return (sizeof(arr) / sizeof(arr[0]));
