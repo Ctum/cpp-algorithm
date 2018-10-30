@@ -20,10 +20,13 @@ void LCS_length(int m, int n, char *x, char *y, int c[50][50], int b[50][50])
     }
 }
 
-void printLcs(int i, int j, char *x, int b[50][50])
+void printLcs(int i, int j, char *x,int b[50][50])
 {
-    if(i==0||j==0) return;
-    if(b[i][j]==1){printLcs(i-1,j-1,x,b); cout<<x[i];}
+    if(i==0||j==0) return ;
+    if(b[i][j]==1){
+        printLcs(i-1,j-1,x,b);
+        cout<<x[i];
+    }
     else if(b[i][j]==2) printLcs(i-1,j,x,b);
     else printLcs(i,j-1,x,b);
 }
@@ -46,7 +49,7 @@ int main()
    }
    LCS_length(m,n,a,b,lcs,path);
    cout<<lcs[m][n]<<endl;
-   printLcs(m,n,a, path);
+   printLcs(m,n,a,path);
    cout<<endl;
    sum--;
   }
